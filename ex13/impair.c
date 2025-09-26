@@ -1,9 +1,21 @@
 //
 // Created by Anir on 26/09/2025.
 //
+#include "spair.c"
+#include "pair.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-#include "impair.h"
-
-int impair(unsigned int i) {
-    return i % 2 != 0;
+int main(int argc, char const *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s \n", argv[0]);
+        return 1;
+    }
+    char *end;
+    long n = strtol(argv[1], &end, 10);
+    if (*end != '\0' || n < 0) {
+        fprintf(stderr, "Veuillez fournir un entier positif ou nul.\n");
+        return 1;
+    }
+    return 0;
 }
