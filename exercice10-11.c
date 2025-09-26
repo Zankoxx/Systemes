@@ -33,17 +33,7 @@ char* int_vers_string(int n) {
     return res2;
 }
 
-int impair(unsigned i);
 
-//Exercice 13
-int pair(unsigned int i) {
-    if (i==0)
-        return 1;
-    return impair(i-1);
-}
+//Exercice 15
 
-int impair(unsigned int i) {
-    if (i==0)
-        return 0;
-    return pair(i-1);
-}
+
